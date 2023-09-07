@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>1.信息收集 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="ps：ip192.168.88.128 1.1端口探测1sudo nmap --min-rate 10000 -p- 192.168.88.128   1.2端口信息扫描1sudo nmap -sT -sV -O -p22,80,137,138,139,901,5900,8080,10000 192.168.88.128    22端口优先级靠后 80端口为主要突破点 137、138、5900端口">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1.信息收集">
+<meta property="og:url" content="http://example.com/2023/09/05/hello-world/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="ps：ip192.168.88.128 1.1端口探测1sudo nmap --min-rate 10000 -p- 192.168.88.128   1.2端口信息扫描1sudo nmap -sT -sV -O -p22,80,137,138,139,901,5900,8080,10000 192.168.88.128    22端口优先级靠后 80端口为主要突破点 137、138、5900端口">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905120150455.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905135215616.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905141325251.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905141952154.png!%5Bimage-20230905142225375%5D(../images/hello-world/image-20230905142225375.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905142847093.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905143142142.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905144346791.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905144438775.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905144534712.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905144544300.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905152646965.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905153012371.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905152833192.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905152938672.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905153140126.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905153201894.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905153247358.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905160857947.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905161520526.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905161455999.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905162848801.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905163023468.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905163041631.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905163145573.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905163713246.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905172844503.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230905180838504.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230906165512963.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230906165637453.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230906165726737.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230907105524867.png">
+<meta property="og:image" content="http://example.com/images/hello-world/image-20230907105559861.png">
+<meta property="article:published_time" content="2023-09-05T02:40:33.907Z">
+<meta property="article:modified_time" content="2023-09-07T02:56:28.488Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/hello-world/image-20230905120150455.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/09/05/hello-world/" class="article-date">
+  <time class="dt-published" datetime="2023-09-05T02:40:33.907Z" itemprop="datePublished">2023-09-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      1.信息收集
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>ps：ip192.168.88.128</p>
+<h2 id="1-1端口探测"><a href="#1-1端口探测" class="headerlink" title="1.1端口探测"></a>1.1端口探测</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap --min-rate 10000 -p- 192.168.88.128</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/hello-world/image-20230905120150455.png" alt="image-20230905120150455"></p>
+<h2 id="1-2端口信息扫描"><a href="#1-2端口信息扫描" class="headerlink" title="1.2端口信息扫描"></a>1.2端口信息扫描</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap -sT -sV -O -p22,80,137,138,139,901,5900,8080,10000 192.168.88.128</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/hello-world/image-20230905135215616.png" alt="image-20230905135215616"></p>
+<ul>
+<li>22端口优先级靠后</li>
+<li>80端口为主要突破点</li>
+<li>137、138、5900端口为关闭状态暂时忽略</li>
+<li>901端口为Samba</li>
+<li>8080为web端口</li>
+<li>10000端口 MiniServ 1.610(Webmin httpd)存在漏洞且在渗透中是经常利用的</li>
+</ul>
+<h2 id="1-3udp扫描"><a href="#1-3udp扫描" class="headerlink" title="1.3udp扫描"></a>1.3udp扫描</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap  -sU -p22,80,137,138,139,901,5900,8080,10000 192.168.88.128</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/hello-world/image-20230905141325251.png" alt="image-20230905141325251"></p>
+<ul>
+<li>并未开放udp端口</li>
+</ul>
+<h2 id="1-4漏洞脚本扫描"><a href="#1-4漏洞脚本扫描" class="headerlink" title="1.4漏洞脚本扫描"></a>1.4漏洞脚本扫描</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap  --script=vuln -p22,80,137,138,139,901,5900,8080,10000 192.168.88.128  </span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/hello-world/image-20230905141952154.png!%5Bimage-20230905142225375%5D(../images/hello-world/image-20230905142225375.png"></p>
+<ul>
+<li>22端口在nmap脚本扫描未发现漏洞</li>
+<li>80端口发现php脚本、Dos攻击、http枚举、支持trace</li>
+</ul>
+<p><img src="/../images/hello-world/image-20230905142847093.png" alt="image-20230905142847093"></p>
+<ul>
+<li>8080端口</li>
+<li>存在login.php页面</li>
+<li>存在http枚举：login.php、phpmyadmin、docs、icons、inc</li>
+</ul>
+<p><img src="/../images/hello-world/image-20230905143142142.png" alt="image-20230905143142142"></p>
+<ul>
+<li>10000端口</li>
+<li>存在dos及smb漏洞</li>
+</ul>
+<h2 id="1-5-查看web页面"><a href="#1-5-查看web页面" class="headerlink" title="1.5 查看web页面"></a>1.5 查看web页面</h2><ul>
+<li>在数据库交互的地方尝试sql注入</li>
+</ul>
+<p><img src="/../images/hello-world/image-20230905144346791.png" alt="image-20230905144346791"></p>
+<p><img src="/../images/hello-world/image-20230905144438775.png" alt="image-20230905144438775"></p>
+<ul>
+<li>80端口失败，继续到8080端口尝试</li>
+</ul>
+<p><img src="/../images/hello-world/image-20230905144534712.png" alt="image-20230905144534712"></p>
+<p><img src="/../images/hello-world/image-20230905144544300.png" alt="image-20230905144544300"></p>
+<ul>
+<li>存在sql注入漏洞</li>
+</ul>
+<p><img src="/../images/hello-world/image-20230905152646965.png" alt="image-20230905152646965"></p>
+<p><img src="/../images/hello-world/image-20230905153012371.png" alt="image-20230905153012371"></p>
+<ul>
+<li>users存在用户，在后续的渗透过程中有一定的价值。22端口为开放状态，我们的目的是拿到基于ssh的用户</li>
+<li>Add new可以新建用户</li>
+</ul>
+<p><img src="/../images/hello-world/image-20230905152833192.png" alt="image-20230905152833192"></p>
+<ul>
+<li>反馈页面，但仅存在一个删除按键。</li>
+</ul>
+<p><img src="/../images/hello-world/image-20230905152938672.png" alt="image-20230905152938672"></p>
+<ul>
+<li>预定。也是仅有删除按键</li>
+</ul>
+<p><img src="/../images/hello-world/image-20230905153140126.png" alt="image-20230905153140126"></p>
+<p><img src="/../images/hello-world/image-20230905153201894.png" alt="image-20230905153201894"></p>
+<p><img src="/../images/hello-world/image-20230905153247358.png" alt="image-20230905153247358"> </p>
+<ul>
+<li>Readings Room中Add new可以上传文件</li>
+<li>既然可以上传文件，那我们就构造一个shell</li>
+</ul>
+<p><img src="/../images/hello-world/image-20230905160857947.png" alt="image-20230905160857947"> </p>
+<ul>
+<li>建立监听</li>
+</ul>
+<p><img src="/../images/hello-world/image-20230905161520526.png" alt="image-20230905161520526"> </p>
+<p><img src="/../images/hello-world/image-20230905161455999.png" alt="image-20230905161455999"> </p>
+<ul>
+<li>回显告诉我们，shell上传成功，但现在我们并不知道shell上传到哪个位置</li>
+<li>进行目录扫描找到文件上传的目录</li>
+</ul>
+<h2 id="1-6目录爆破"><a href="#1-6目录爆破" class="headerlink" title="1.6目录爆破"></a>1.6目录爆破</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dirb http:192.168.88.128</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/hello-world/image-20230905162848801.png" alt="image-20230905162848801"> </p>
+<ul>
+<li>挨个尝试–过程不再记录</li>
+</ul>
+<p><img src="/../images/hello-world/image-20230905163023468.png" alt="image-20230905163023468"> </p>
+<ul>
+<li>执行shell</li>
+</ul>
+<p><img src="/../images/hello-world/image-20230905163041631.png" alt="image-20230905163041631"> </p>
+<ul>
+<li>反弹shell建立成功</li>
+</ul>
+<p><img src="/../images/hello-world/image-20230905163145573.png" alt="image-20230905163145573"> </p>
+<ul>
+<li>权限有点低，我们需要python建立提权，回显告诉我们缺少tty终端设备。我们需要给一个虚拟设备pty</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -c &#x27;import pty;pty.spawn(&quot;/bin/bash&quot;)&#x27;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/hello-world/image-20230905163713246.png" alt="image-20230905163713246"> </p>
+<ul>
+<li>回显告诉我们需要密码。但现在我们没有密码，先放一放</li>
+<li>当前cms存在mysql。从开发角度而言，系统密码和数据库密码极有可能是同一人设置且设置为相同密码，属于一个人的习惯。从操作角度来说，这在渗透测试中叫密码碰撞，而算是简化版的密码喷射。属于我们去下一步去数据库中找一下系统凭据。</li>
+<li>使用mysql默认账号密码尝试登录</li>
+</ul>
+<p><img src="/../images/hello-world/image-20230905172844503.png" alt="image-20230905172844503"></p>
+<ul>
+<li>查看数据库用户</li>
+</ul>
+<p><img src="/../images/hello-world/image-20230905180838504.png" alt="image-20230905180838504"> </p>
+<ul>
+<li>因为我们是从web端进来的所以我们先看website</li>
+</ul>
+<p><img src="/../images/hello-world/image-20230906165512963.png" alt="image-20230906165512963"></p>
+<ul>
+<li>回显告诉我们数据库已经发生改变</li>
+<li>继续看一下tables有哪些表</li>
+</ul>
+<p><img src="/../images/hello-world/image-20230906165637453.png" alt="image-20230906165637453"></p>
+<ul>
+<li>其中有个users表我们是最感兴趣的</li>
+</ul>
+<p><img src="/../images/hello-world/image-20230906165726737.png" alt="image-20230906165726737"></p>
+<ul>
+<li>第一行中brian用户有个备注：brian是我们运营背后的技术头脑和首席培训师。</li>
+<li>所以我们可以认为brian的权限是最高的</li>
+<li>破解brian的密码哈希值</li>
+</ul>
+<p><img src="/../images/hello-world/image-20230907105524867.png" alt="image-20230907105524867"></p>
+<ul>
+<li>拿到密码my2cents</li>
+<li>尝试ssh连接</li>
+</ul>
+<p><img src="/../images/hello-world/image-20230907105559861.png" alt="image-20230907105559861"></p>
+<ul>
+<li>sudo -l后发现为两个all</li>
+<li>可以直接提权</li>
+<li>拿到root权限</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/09/05/hello-world/" data-id="clm8rcpsn0001z4o9dvw7b2xy" data-title="1.信息收集" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/09/05/CTF7/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          LAMPSecurityCTF7打靶记录
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">September 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/09/07/post/">post</a>
+          </li>
+        
+          <li>
+            <a href="/2023/09/05/CTF7/">LAMPSecurityCTF7打靶记录</a>
+          </li>
+        
+          <li>
+            <a href="/2023/09/05/hello-world/">1.信息收集</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
